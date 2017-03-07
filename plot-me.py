@@ -15,7 +15,8 @@ while choice:
     print("Welcome to the plotter")
     print("(1) Plot Celsius vs Farenheit")
     print("(2) Plot Kilometers vs Miles")
-    print("(3) Manually give the X and Y lists")
+    print("(3) Plot Kilograms vs Pounds")
+    print("(M) Manually give the X and Y lists")
     print("(0) Exit")
     print("")
 
@@ -45,10 +46,20 @@ while choice:
     elif choice == '3':
 
         print("You entered Choice 3")
+        x = range(0, 100, 1)
+        for val in x:
+            y.append(val*2.20462)
+        pl.xlabel("Kilograms")
+        pl.ylabel("Pounds")
+
+    elif choice == 'M':
+
+        print("You entered Choice 3")
         x = input("Enter the X values [1,2,3,..]:")
         y = input("Enter the Y values [1,2,3,..]:")
 
     else:
+        print("Bye Bye!!")
         exit()
 
     # Finding the average difference
